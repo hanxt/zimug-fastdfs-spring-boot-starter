@@ -15,6 +15,7 @@ git clone 本项目之后，本地install，引入
 
 
 ### 配置方法
+在application.yml里面加上如下配置:
 ```
 zimug:
   fastdfs:
@@ -27,17 +28,15 @@ zimug:
     max_total: 50
     http_anti_steal_token: false            # 如果有防盗链的话，这里true
     http_secret_key:                        # 有防盗链，这里填secret_key
-
-···
+```
 
 
 ### 使用
-
-···
+```
 
     @Resource
     FastDFSClientUtil fastDFSClientUtil;
 
 
     使用fastDFSClientUtil提供的方法上传、下载、删除
-···
+```
