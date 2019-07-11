@@ -26,6 +26,11 @@ public class AutoConfigure {
     }
 
     @Bean
+    FastDFSClientPool fastDFSClientPool(){
+        return new FastDFSClientPool(properties);
+    }
+
+    @Bean
     @ConditionalOnMissingBean  //当没有FastDFSClientUtil，就把FastDFSClientUtil作为Bean注入Spring
     FastDFSClientUtil fastDFSClientUtil (){
         return  new FastDFSClientUtil(properties);

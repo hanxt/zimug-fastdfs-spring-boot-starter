@@ -33,7 +33,16 @@ public class FastDFSClientUtil {
         return uploadFile(Base64.decode(picFileBase64), file_ext_name);
     }
 
-
+    /**
+     *  删除文件
+     * @param filepath 如:group1/M00/00/00/wKgBPFekWyiAMx1VAACgzAM4CW0916.jpg
+     */
+    public void delete(String filepath) throws Exception{
+        GenericObjectPool<FastDFSClient> pool =  FastDFSClientPool.getInstance();
+        FastDFSClient client = pool.borrowObject();
+        client.getStorageClient1().delete_file1(filepath);
+        pool.returnObject(client);
+    }
 
     /**
      * 下载服务器文件到本地
