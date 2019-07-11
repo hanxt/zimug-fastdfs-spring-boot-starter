@@ -15,7 +15,7 @@ git clone 本项目之后，本地install，引入
 
 
 ### 配置方法
-···
+```
 zimug:
   fastdfs:
     httpserver: http://192.168.1.91:80/      #这个不是fastdfs属性，但是填上之后，在使用FastDFSClientUtil会得到完整的http文件访问路径
