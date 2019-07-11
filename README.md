@@ -1,6 +1,7 @@
 # zimug-fastdfs-spring-boot-starter
 实现fastdfs与spring boot的快速集成，并加入连接池机制
 
+我的联系方式: www.zimug.com     hanxiaotongtong@163.com
 
 ## 使用方法
 git clone 本项目之后，本地install，引入
